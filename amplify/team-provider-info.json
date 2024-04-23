@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "travelnotes87a0ca64": {}
+      },
+      "api": {
+        "travelnotes": {}
+      },
+      "storage": {
+        "image": {}
       }
     }
   }

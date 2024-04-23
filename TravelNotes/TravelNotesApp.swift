@@ -6,30 +6,31 @@
 //
 
 import Amplify
+import AWSAPIPlugin
 import AWSCognitoAuthPlugin
+import AWSS3StoragePlugin
 import SwiftUI
 
 @main
 struct TravelNotesApp: App {
 
-	private let authenticationService: AuthenticationService
-
 	init() {
 		do {
 			try Amplify.add(plugin: AWSCognitoAuthPlugin())
+			try Amplify.add(plugin: AWSAPIPlugin(modelRegistration: AmplifyModels()))
+			try Amplify.add(plugin: AWSS3StoragePlugin())
 			try Amplify.configure()
 			print("initialized Amplify")
 		} catch {
 			print("Could not initialize Amplify: \(error)")
 		}
-
-		authenticationService = AuthenticationService()
 	}
 
 	var body: some Scene {
 		WindowGroup {
 			LandingView()
-				.environmentObject(authenticationService)
+				.environmentObject(AuthenticationService())
+				.environmentObject(NotesService())
 		}
 	}
 }

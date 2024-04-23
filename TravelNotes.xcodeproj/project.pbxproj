@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0713F78C2BD8683E0028A85A /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 0713F78B2BD8683E0028A85A /* AWSS3StoragePlugin */; };
 		072517782BD8264C00BC177D /* TravelNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072517772BD8264C00BC177D /* TravelNotesApp.swift */; };
 		0725177C2BD8264D00BC177D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0725177B2BD8264D00BC177D /* Assets.xcassets */; };
 		0725177F2BD8264D00BC177D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0725177E2BD8264D00BC177D /* Preview Assets.xcassets */; };
-		072517862BD8289F00BC177D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072517852BD8289F00BC177D /* Note.swift */; };
 		072517882BD829A200BC177D /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072517872BD829A200BC177D /* NoteView.swift */; };
 		0725178A2BD82B5800BC177D /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072517892BD82B5800BC177D /* NotesView.swift */; };
 		0725178D2BD8372E00BC177D /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 0725178C2BD8372E00BC177D /* Amplify */; };
@@ -18,8 +18,14 @@
 		072517962BD83B9700BC177D /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072517952BD83B9700BC177D /* AuthenticationService.swift */; };
 		072517982BD8407200BC177D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072517972BD8407200BC177D /* LandingView.swift */; };
 		0725179A2BD8418B00BC177D /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072517992BD8418A00BC177D /* Titles.swift */; };
+		0725179C2BD852EF00BC177D /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 0725179B2BD852EF00BC177D /* AWSAPIPlugin */; };
+		0725179E2BD8537700BC177D /* NotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725179D2BD8537700BC177D /* NotesService.swift */; };
+		072517A02BD8576400BC177D /* SaveNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725179F2BD8576400BC177D /* SaveNoteView.swift */; };
 		17311276751A91122CE366F3 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D1A2F65212E9B4B1822F83F /* amplifyconfiguration.json */; };
+		76B734161352BBE1DDD380A3 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8C0671EC9FAC804CE51C33 /* AmplifyModels.swift */; };
+		832430B17B97095AE3BB01DE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2485E200FA5090270AFB5D /* Note.swift */; };
 		C8E80A7549A3F377EA95210A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 52C1E316F1C5FA803996C304 /* awsconfiguration.json */; };
+		D724F6C194D8F979F9FA1ECD /* Note+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F43E557755E26FA8094C740 /* Note+Schema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,14 +33,18 @@
 		072517772BD8264C00BC177D /* TravelNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelNotesApp.swift; sourceTree = "<group>"; };
 		0725177B2BD8264D00BC177D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0725177E2BD8264D00BC177D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		072517852BD8289F00BC177D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		072517872BD829A200BC177D /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		072517892BD82B5800BC177D /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		072517912BD83AA700BC177D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		072517952BD83B9700BC177D /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		072517972BD8407200BC177D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		072517992BD8418A00BC177D /* Titles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
+		0725179D2BD8537700BC177D /* NotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesService.swift; sourceTree = "<group>"; };
+		0725179F2BD8576400BC177D /* SaveNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteView.swift; sourceTree = "<group>"; };
+		0D2485E200FA5090270AFB5D /* Note.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Note.swift; path = amplify/generated/models/Note.swift; sourceTree = "<group>"; };
+		1C8C0671EC9FAC804CE51C33 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		52C1E316F1C5FA803996C304 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		6F43E557755E26FA8094C740 /* Note+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Note+Schema.swift"; path = "amplify/generated/models/Note+Schema.swift"; sourceTree = "<group>"; };
 		8D1A2F65212E9B4B1822F83F /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,8 +53,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0725179C2BD852EF00BC177D /* AWSAPIPlugin in Frameworks */,
 				0725178D2BD8372E00BC177D /* Amplify in Frameworks */,
 				072517902BD83A6600BC177D /* AWSCognitoAuthPlugin in Frameworks */,
+				0713F78C2BD8683E0028A85A /* AWSS3StoragePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +70,7 @@
 				072517752BD8264C00BC177D /* Products */,
 				C8DE314E7521BE439545AFEC /* AmplifyConfig */,
 				0725178E2BD83A6600BC177D /* Frameworks */,
+				D1FCE8865870B9D5D704A61B /* AmplifyModels */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				072517952BD83B9700BC177D /* AuthenticationService.swift */,
+				0725179D2BD8537700BC177D /* NotesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -111,6 +125,7 @@
 				072517872BD829A200BC177D /* NoteView.swift */,
 				072517892BD82B5800BC177D /* NotesView.swift */,
 				072517972BD8407200BC177D /* LandingView.swift */,
+				0725179F2BD8576400BC177D /* SaveNoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				072517922BD83B6100BC177D /* Services */,
-				072517852BD8289F00BC177D /* Note.swift */,
 				072517992BD8418A00BC177D /* Titles.swift */,
 			);
 			path = Entities;
@@ -132,6 +146,16 @@
 				8D1A2F65212E9B4B1822F83F /* amplifyconfiguration.json */,
 			);
 			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
+		D1FCE8865870B9D5D704A61B /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+				1C8C0671EC9FAC804CE51C33 /* AmplifyModels.swift */,
+				6F43E557755E26FA8094C740 /* Note+Schema.swift */,
+				0D2485E200FA5090270AFB5D /* Note.swift */,
+			);
+			name = AmplifyModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +177,8 @@
 			packageProductDependencies = (
 				0725178C2BD8372E00BC177D /* Amplify */,
 				0725178F2BD83A6600BC177D /* AWSCognitoAuthPlugin */,
+				0725179B2BD852EF00BC177D /* AWSAPIPlugin */,
+				0713F78B2BD8683E0028A85A /* AWSS3StoragePlugin */,
 			);
 			productName = TravelNotes;
 			productReference = 072517742BD8264C00BC177D /* TravelNotes.app */;
@@ -215,11 +241,15 @@
 			files = (
 				072517982BD8407200BC177D /* LandingView.swift in Sources */,
 				072517782BD8264C00BC177D /* TravelNotesApp.swift in Sources */,
+				072517A02BD8576400BC177D /* SaveNoteView.swift in Sources */,
 				0725178A2BD82B5800BC177D /* NotesView.swift in Sources */,
+				0725179E2BD8537700BC177D /* NotesService.swift in Sources */,
 				072517882BD829A200BC177D /* NoteView.swift in Sources */,
 				0725179A2BD8418B00BC177D /* Titles.swift in Sources */,
-				072517862BD8289F00BC177D /* Note.swift in Sources */,
 				072517962BD83B9700BC177D /* AuthenticationService.swift in Sources */,
+				76B734161352BBE1DDD380A3 /* AmplifyModels.swift in Sources */,
+				D724F6C194D8F979F9FA1ECD /* Note+Schema.swift in Sources */,
+				832430B17B97095AE3BB01DE /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +470,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0713F78B2BD8683E0028A85A /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0725178B2BD8372E00BC177D /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSS3StoragePlugin;
+		};
 		0725178C2BD8372E00BC177D /* Amplify */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0725178B2BD8372E00BC177D /* XCRemoteSwiftPackageReference "amplify-swift" */;
@@ -449,6 +484,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0725178B2BD8372E00BC177D /* XCRemoteSwiftPackageReference "amplify-swift" */;
 			productName = AWSCognitoAuthPlugin;
+		};
+		0725179B2BD852EF00BC177D /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0725178B2BD8372E00BC177D /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSAPIPlugin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
