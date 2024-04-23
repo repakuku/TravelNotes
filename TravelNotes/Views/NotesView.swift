@@ -8,33 +8,27 @@
 import SwiftUI
 
 struct NotesView: View {
+	@EnvironmentObject private var authenticationSrrvice: AuthenticationService
 	@State var notes: [Note] = []
 
 	var body: some View {
 		NavigationStack {
 			List {
 				if notes.isEmpty {
-					Text(Titles.noNotes.description)
+					Text(Titles.NotesScene.noNotes.description)
 				}
 				ForEach(notes, id: \.id) { note in
 					NoteView(note: note)
 				}
 			}
-			.navigationTitle(Titles.notes.description)
-		}
-	}
-}
-
-enum Titles {
-	case noNotes
-	case notes
-
-	var description: String {
-		switch self {
-		case .noNotes:
-			"No notes"
-		case .notes:
-			"Notes"
+			.navigationTitle(Titles.NotesScene.notes.description)
+			.toolbar {
+				Button(Titles.NotesScene.signOut.description) {
+					Task {
+						await authenticationSrrvice.signOut()
+					}
+				}
+			}
 		}
 	}
 }

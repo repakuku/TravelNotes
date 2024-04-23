@@ -10,6 +10,11 @@
       "StackName": "amplify-travelnotes-dev-5541b",
       "StackId": "arn:aws:cloudformation:us-east-1:905418411906:stack/amplify-travelnotes-dev-5541b/e0495ea0-019e-11ef-9248-0e795d0e8797",
       "AmplifyAppId": "d3flp00aj1r8s8"
+    },
+    "categories": {
+      "auth": {
+        "travelnotes87a0ca64": {}
+      }
     }
   }
 }

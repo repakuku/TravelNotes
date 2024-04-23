@@ -32,13 +32,13 @@ struct NoteView: View {
 			}
 		}
 	}
-}
 
-struct Const {
-	static let spacing: CGFloat = 5
+	private struct Const {
+		static let spacing: CGFloat = 5
 
-	static let width: CGFloat = 30
-	static let height: CGFloat = 30
+		static let width: CGFloat = 30
+		static let height: CGFloat = 30
+	}
 }
 
 #Preview {
