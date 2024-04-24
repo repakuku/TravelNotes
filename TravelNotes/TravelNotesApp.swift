@@ -31,6 +31,7 @@ struct TravelNotesApp: App {
 			LandingView()
 				.environmentObject(AuthenticationService())
 				.environmentObject(NotesService())
+				.environmentObject(StorageService())
 		}
 	}
 }

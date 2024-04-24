@@ -25,9 +25,7 @@ struct NoteView: View {
 
 				Divider()
 
-				Image(systemName: image)
-					.resizable()
-					.aspectRatio(contentMode: .fill)
+				RemoteImageView(name: image)
 					.frame(width: Const.width, height: Const.height)
 			}
 		}
@@ -39,15 +37,4 @@ struct NoteView: View {
 		static let width: CGFloat = 30
 		static let height: CGFloat = 30
 	}
-}
-
-#Preview {
-	NoteView(
-		note:
-			Note(
-				name: "Note",
-				description: "Description",
-				image: "note"
-			)
-	)
 }

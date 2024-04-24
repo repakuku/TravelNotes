@@ -10,13 +10,14 @@ import SwiftUI
 struct NotesView: View {
 	@EnvironmentObject private var authenticationSrrvice: AuthenticationService
 	@EnvironmentObject private var notesService: NotesService
+	@EnvironmentObject private var storageService: StorageService
 	@State private var isSavingNote = false
 
 	var body: some View {
 		NavigationStack {
 			List {
 				if notesService.notes.isEmpty {
-					Text(Titles.NotesScene.noNotes.description)
+					Text(Titles.Notes.noNotes.description)
 				}
 				ForEach(notesService.notes, id: \.id) { note in
 					NoteView(note: note)
@@ -26,13 +27,16 @@ struct NotesView: View {
 						let note = notesService.notes[index]
 						Task {
 							await notesService.delete(note)
+							if let image = note.image {
+								await storageService.remove(withName: image)
+							}
 						}
 					}
 				}
 			}
-			.navigationTitle(Titles.NotesScene.notes.description)
+			.navigationTitle(Titles.Notes.notes.description)
 			.toolbar {
-				Button(Titles.NotesScene.signOut.description) {
+				Button(Titles.Notes.signOut.description) {
 					Task {
 						await authenticationSrrvice.signOut()
 					}
@@ -40,7 +44,7 @@ struct NotesView: View {
 			}
 			.toolbar {
 				ToolbarItem(placement: .bottomBar) {
-					Button(Titles.NotesScene.newNote.description) {
+					Button(Titles.Notes.newNote.description) {
 						isSavingNote = true
 					}
 					.bold()

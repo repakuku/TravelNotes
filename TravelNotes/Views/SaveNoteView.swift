@@ -10,37 +10,40 @@ import SwiftUI
 struct SaveNoteView: View {
 	@Environment(\.dismiss) private var dismiss
 	@EnvironmentObject private var notesService: NotesService
+	@EnvironmentObject private var storageService: StorageService
 	@State private var name = ""
 	@State private var description = ""
-	@State private var image = ""
+	@State private var image: Data? = nil
 
 	var body: some View {
 		Form {
-			Section(Titles.SaveNoteScene.Section.details.description) {
-				TextField(Titles.SaveNoteScene.TextField.name.description, text: $name)
-				TextField(Titles.SaveNoteScene.TextField.description.description, text: $description)
+			Section(Titles.SaveNote.Section.details.description) {
+				TextField(Titles.SaveNote.TextField.name.description, text: $name)
+				TextField(Titles.SaveNote.TextField.description.description, text: $description)
 			}
 
-			Section(Titles.SaveNoteScene.Section.picture.description) {
-				TextField(Titles.SaveNoteScene.TextField.imageName.description, text: $image)
+			Section(Titles.SaveNote.Section.picture.description) {
+				PicturePickerView(selectedData: $image)
 			}
 
-			Button(Titles.SaveNoteScene.Button.saveNote.description) {
+			Button(Titles.SaveNote.Button.saveNote.description) {
+				let imageName = image != nil ? UUID().uuidString : nil
 				let note = Note(
 					name: name,
 					description: description.isEmpty ? nil : description,
-					image: image.isEmpty ? nil : image
+					image: imageName
 				)
 
 				Task {
+					if let image, let imageName {
+						await storageService.upload(image, name: imageName)
+					}
+
 					await notesService.save(note)
+
 					dismiss()
 				}
 			}
 		}
 	}
-}
-
-#Preview {
-	SaveNoteView()
 }

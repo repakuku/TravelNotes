@@ -9,7 +9,7 @@ import Foundation
 
 enum Titles {
 
-	enum NotesScene {
+	enum Notes {
 		case noNotes
 		case notes
 		case newNote
@@ -30,7 +30,7 @@ enum Titles {
 		}
 	}
 
-	enum LandingScene {
+	enum Landing {
 		case signIn
 
 		var description: String {
@@ -41,7 +41,7 @@ enum Titles {
 		}
 	}
 
-	enum SaveNoteScene {
+	enum SaveNote {
 		enum Section {
 			case details
 			case picture
@@ -81,6 +81,20 @@ enum Titles {
 				case .imageName:
 					return "Image Name"
 				}
+			}
+		}
+	}
+
+	enum PicturePicker {
+		case choosePicture
+		case changePicture
+
+		var description: String {
+			switch self {
+			case .choosePicture:
+				return "Choose a picture"
+			case .changePicture:
+				return "Change picture"
 			}
 		}
 	}

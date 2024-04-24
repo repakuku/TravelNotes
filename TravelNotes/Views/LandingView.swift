@@ -22,7 +22,7 @@ struct LandingView: View {
 				if authenticationService.isSignedIn {
 					NotesView()
 				} else {
-					Button(Titles.LandingScene.signIn.description) {
+					Button(Titles.Landing.signIn.description) {
 						Task {
 							await authenticationService.signIn(presentationAnchor: window)
 						}
@@ -55,9 +55,4 @@ struct LandingView: View {
 		static let highOpacity: CGFloat = 1
 		static let lowOpacity: CGFloat = 0.5
 	}
-}
-
-#Preview {
-	LandingView()
-		.environmentObject(AuthenticationService())
 }
